@@ -1,0 +1,34 @@
+#примеры запросов
+@baseUrl = http://127.0.0.1:5000
+
+#cоздание пользователя:
+POST {{baseUrl}}/user/
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Jason Stathem"
+}
+###
+
+#cоздание объявления:
+POST {{baseUrl}}/ad/
+Content-Type: application/json
+
+
+{
+    "id": 1,
+    "header": "продам велосипед",
+    "description": "кама, красный, новый, 5000р",
+    "owner": "1"
+}
+###
+
+#получение объявления:
+GET {{baseUrl}}/ad/
+Content-Type: application/json
+###
+
+#удаление объявления:
+DELETE {{baseUrl}}/ad/
+Content-Type: application/json
